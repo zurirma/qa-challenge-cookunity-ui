@@ -1,0 +1,24 @@
+{
+  "name": "qa-challenge-cookunity-ui",
+  "version": "1.0.0",
+  "description": "Cypress UI Automation Framework for CookUnity Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test:ui": "cypress run",
+    "report": "cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,reportFilename=index,overwrite=true,html=true,json=true",
+    "report:open": "open cypress/reports/index.html",
+    "clean:reports": "rm -rf cypress/reports && mkdir -p cypress/reports"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.3.3",
+    "mochawesome": "^7.1.3"
+  },
+  "dependencies": {
+    "cypress-wait-until": "^1.7.3"
+  }
+}
+
+

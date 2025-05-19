@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-19T23:21:23.286Z",
+    "end": "2025-05-19T23:22:16.683Z",
+    "duration": 53397,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1e6f1e4b-64de-408d-9b31-d1a81cf7a106",
+      "title": "",
+      "fullFile": "cypress/e2e/sign-up-workflow.cy.js",
+      "file": "cypress/e2e/sign-up-workflow.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a052fa7f-9ff5-40d6-8e48-c8bea65d352c",
+          "title": "CookUnity - Sign up Workflow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete the meal selection flow and sign up successfully",
+              "fullTitle": "CookUnity - Sign up Workflow should complete the meal selection flow and sign up successfully",
+              "timedOut": null,
+              "duration": 43423,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const fallbackEmail = (0, _utils.generateUniqueEmail)();\ncy.visit('/');\n_HomePage.default.enterZipCode('10001');\ncy.assertUrlContains('/preferences-quiz');\n_Quiz.default.skipAll();\ncy.assertUrlContains('/plan-select');\n_PlanSelectionPage.default.selectSixMealPlan();\n_SignUpPage.default.goToLogin();\n_SignUpPage.default.signUpWithFallback(fallbackEmail);\n_MealSelectionPage.default.waitForMealSelectPageToLoad();\ncy.assertUrlContains('/en/meal-select');\n_MealSelectionPage.default.verifyPageIsLoaded();",
+              "err": {},
+              "uuid": "3b2156bb-85d9-47e1-be54-3c9033316f62",
+              "parentUUID": "a052fa7f-9ff5-40d6-8e48-c8bea65d352c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3b2156bb-85d9-47e1-be54-3c9033316f62"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 43423,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "CookUnity UI Automation",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
