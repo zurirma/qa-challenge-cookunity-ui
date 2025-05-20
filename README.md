@@ -2,12 +2,15 @@
 
 This repository contains the **Frontend test automation** for CookUnity's signup workflow, developed with Cypress using best practices such as:
 
-- Page Object Model (POM)
-- Custom commands
-- Separation of test data
-- Visual HTML report generation and video related.
+##  Key Features
 
----
+**Page Object Model (POM)** for clear separation of concerns.
+**Custom Cypress Commands** for better abstraction and reusability.
+**Test data separation** via fixtures.
+**Robustness**: handles dynamic behavior, cross-origin navigation, and loading delays.
+**Retry logic** enabled to reduce flaky test failures.
+**Video-ready support** 
+
 
 ## How to set up and run the project locally
 
@@ -42,10 +45,14 @@ Test retries are enabled globally in cypress.config.js:
 This ensures tests are retried once if they fail due to transient issues (e.g., animations or network delays).
 
 ## Reporting
-HTML reports are generated using Mochawesome. There is also a video regarding the run.
+There's a video section to show the test runs.
 
 
 ## Notes
-The test flow accounts for dynamic content and transitions (e.g., cy.origin, cy.waitUntil, cy.intercept).
+The test handles dynamic elements using cy.waitUntil, cy.intercept, and cy.origin.
 
-Cypress best practices were followed to ensure maintainability, such as proper selector strategies, retries, and cleanup (clearCookies, clearLocalStorage).
+Cookies and local storage are cleared before each test to ensure independence.
+
+Selector strategies rely on data-testid for resilience to UI changes.
+
+Edge cases such as reusing the same email for signup are handled gracefully.
