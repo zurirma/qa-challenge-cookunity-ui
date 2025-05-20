@@ -19,8 +19,10 @@ git clone https://github.com/zurirma/qa-challenge-cookunity-ui.git
 cd qa-challenge-cookunity-ui
 2. Install dependencies
 npm install
-3. Run the test and generate the HTML report
-npm run report
+3. Run the test headlessly
+npx cypress run or (with cypress ui): npx cypress open
+
+NOTE:  there's already a run test video available on "videos" section.
 
 
 ## Repo structure:
